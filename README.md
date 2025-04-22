@@ -12,7 +12,7 @@ This tool ensures your communications maintain a professional tone and avoid uni
 
 ## Usage
 
-1. **Launch the demo**: Click the Gradio link (or visit the hosted URL) to open the app.
+1. **Launch the demo**
 2. **Paste your email**: Enter your draft into the text box.
 3. **Choose a model**: Select between the fine‑tuned **DistilBERT** or the **TF‑IDF LogReg** baseline.
 4. **Analyze**: Click **Analyze ✨** to see the risk badge and top emotions.
