@@ -55,7 +55,6 @@ I converted each list of emotion tags into a **28-dimensional binary vector** (m
 - **Library**: `scikit-learn`  
 - **Vectorizer**: `TfidfVectorizer` with a vocabulary of the top 40,000 unigrams and bigrams by frequency.
 - **Classifier**: `LogisticRegression` (one-vs-rest) trained on the *first* emotion tag for a single-label baseline.  
-- **Performance**: CPU training in under 30 seconds.  
 
 ### Transformer Model (DistilBERT)
 
@@ -63,8 +62,7 @@ I converted each list of emotion tags into a **28-dimensional binary vector** (m
 - **Backbone**: `distilbert-base-uncased` (66 million parameters) pre-trained on general English corpora.
 - **Fine‑tuning**:
   - **Task**: Multi-label classification with **28 output heads** (sigmoid activations).  
-  - **Hyperparameters**: 3 epochs, batch size 8, learning rate 2e-5, weight decay 0.01.  
-  - **Compute**: Fine‑tuning on a single NVIDIA T4 GPU in approximately 12 minutes.  
+  - **Hyperparameters**: 3 epochs, batch size 8, learning rate 2e-5, weight decay 0.01.   
   - **Thresholding**: The optimal probability threshold of **0.25** was selected by maximizing micro‑F1 on the validation split.
 
 
