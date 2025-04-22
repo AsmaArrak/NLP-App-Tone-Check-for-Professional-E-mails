@@ -46,20 +46,6 @@ Jordan
 - **Transformers**: `distilbert-base-uncased` fine‑tuned for multi‑label emotion classification.
 - **scikit-learn**: TF‑IDF vectorizer + LogisticRegression baseline.
 
-### Data Flow
-
-```mermaid
-flowchart TD
-  A[User Input] --> B[Gradio Interface]
-  B --> C{Model Choice}
-  C --> D[DistilBERT Pipeline]
-  C --> E[TF-IDF Baseline]
-  D --> F[Sigmoid → Probabilities]
-  E --> F[Single‑label Prediction]
-  F --> G[Threshold (0.25) → Binary Labels]
-  G --> H[Risk Bucket & Top Emotions]
-  H --> I[Display Badge & JSON]
-```
 
 ### DistilBERT Details
 
@@ -78,20 +64,16 @@ flowchart TD
 - **Classifier**: One‑vs‑rest LogisticRegression, single‑label (first emotion tag)
 - **Performance**: Trains in seconds on CPU; micro‑F1 ≈ 0.35 vs 0.53 for DistilBERT
 
-### Experiments
 
-| Model            | micro‑F1 | macro‑F1 | subset‑Acc |
-|------------------|----------|----------|------------|
-| TF‑IDF LogReg    | 0.350    | 0.280    | 0.200      |
-| DistilBERT (ft)  | 0.535    | 0.462    | 0.318      |
-| Zero‑shot NLI    | 0.480    | 0.410    | 0.290      |
+##  Results
 
-## Contributions
+| Model                   | micro‑F1 | macro‑F1 | subset‑Acc |
+| ----------------------- | -------- | -------- | ---------- |
+| TF‑IDF LogReg           | 0.504    | 0.260    | 0.504      |
+| DistilBERT (fine‑tuned) | 0.100    | 0.023    | 0.020      |
 
-- Fine‑tuned a pre-trained DistilBERT on GoEmotions for professional tone detection.
-- Integrated a dual‑model UI (Transformer & TF‑IDF baseline) for side‑by‑side comparison.
-- Built a polished Gradio interface with risk badges, demo examples, and mobile‑friendly layout.
-- Performed threshold optimization and multi‑metric evaluation.
+
+
 
 ## Limitations
 
