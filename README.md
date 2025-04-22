@@ -37,7 +37,7 @@ Jordan
   - urgency: 0.64
   - neutral: 0.20
 </details>
--------------------------
+
 ## Documentation
 
 ### Dataset
@@ -68,8 +68,6 @@ I converted each list of emotion tags into a **28-dimensional binary vector** (m
   - **Thresholding**: The optimal probability threshold of **0.25** was selected by maximizing micro‑F1 on the validation split.
 
 
-
-          --------------------------------
 
 
 ##  Results
