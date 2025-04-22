@@ -49,7 +49,7 @@ Jordan
 - **Test**: 5,427 examples  
 
 I converted each list of emotion tags into a **28-dimensional binary vector** (multi-hot) for model fine‑tuning.
-
+I included two models so you can compare a simple, fast baseline against a more powerful transformer. The TF‑IDF + LogReg model shows what you get with basic word‑count features in seconds on your CPU, while the fine‑tuned DistilBERT demonstrates how much better a pretrained language model can capture subtle or multiple emotions. Displaying both side‑by‑side highlights the real advantage of using modern NLP.
 ### Baseline Model (TF‑IDF + Logistic Regression)
 
 - **Library**: `scikit-learn`  
