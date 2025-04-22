@@ -1,4 +1,5 @@
 # Tone Check for Professional E‑mails
+code: https://colab.research.google.com/drive/1zEuFe6gPUOrAVF0cXoJnPshGYYdWUTxK?usp=sharing
 
 ## Introduction
 
@@ -84,5 +85,4 @@ Jordan
 
 ---
 
-*For questions or to view the code, visit [GitHub repo link here].*
 
